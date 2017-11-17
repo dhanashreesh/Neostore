@@ -1,0 +1,103 @@
+<div class="container">
+    <div class="card">
+      <div class="row">
+        <div class="wrapper">
+          <div class="col-md-6">
+            <div class="preview">
+              <div class="preview-pic tab-content">
+                <div class="my-img active"><img class="actual-img" src="{{currentImage}}"></div>
+              </div>
+              <ul class="preview-thumbnail nav nav-tabs">
+                <li *ngFor="let prod_img of product_details.images" (click)="changeImage(prod_img.ThumbURL250)">
+                  <div class="my-img-thumb"><img src="{{prod_img.ThumbURL250}}"></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 ">
+            <div class="details">
+              <h3 class="text-danger">{{product_details.product_name}}</h3>
+
+              <div class="rating width-box">
+                <star-rating-comp [starType]="'svg'" [size]="'medium'" [rating]="rating" [readOnly]="true" [staticColor]="'negative'" [showHalfStars]="true"></star-rating-comp>
+              </div>
+
+              <hr>
+              <h4>Price: 
+              <span class="text-success">{{product_details.product_cost| currency:'INR':true:'1.0-0'}}</span></h4>
+              <h4>Color:
+                <span class="color" [ngStyle]="{'background-color': product_details.product_color.color_code }"></span>
+              </h4>
+
+              <div class="action">
+                <h4>Share on
+                  <i class="fa fa-share-alt fa-lg"></i>
+                </h4>
+                <div class="share-container">
+                  <a href="#" class="btn btn-primary"><i class="fa fa-lg fa-facebook"></i></a>&nbsp;
+                  <a href="#" class="btn btn-danger"><i class="fa fa-lg fa-google"></i></a>&nbsp;
+                  <a href="#" class="btn btn-info"><i class="fa fa-lg fa-twitter"></i></a>&nbsp;
+                  <a href="#" class="btn btn-primary"><i class="fa fa-lg fa-linkedin"></i></a>&nbsp;
+                  <a href="#" class="btn btn-success"><i class="fa fa-lg fa-whatsapp"></i></a>
+                </div>
+              </div>
+
+              <div class="action">
+                <button class="btn btn-primary" type="button">ADD TO CART</button>
+                <button type="button" class="btn btn-warning" data-toggle="modal" data-target=".bs-example-modal-sm">RATE PRODUCT</button>
+
+                <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                  <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content">
+                      <div class="modal-body">
+                        <div class="text-warning text-center">
+                          <i class="fa fa-lg fa-star"></i>
+                          <i class="fa fa-lg fa-star"></i>
+                          <i class="fa fa-lg fa-star"></i>
+                          <i class="fa fa-lg fa-star-o"></i>
+                          <i class="fa fa-lg fa-star-o"></i>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">CLOSE</button>
+                        <button type="button" class="btn btn-primary">RATE IT</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="wrapper">
+          <div class="col-md-12">
+            <div class="preview">
+              <div>
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                  <li role="presentation" class="active"><a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">Discription</a></li>
+                  <li role="presentation"><a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">Features</a></li>
+                </ul>
+                <br>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div role="tabpanel" class="tab-pane active" id="tab1">{{product_details.product_description}}
+                  </div>
+                  <div role="tabpanel" class="tab-pane" id="tab2">
+                  	<h5 class="caption">Dimensions: {{product_details.product_dimension}} (Width*Hieght in inc)</h5>
+              		<h5 class="caption">Material: {{product_details.product_material}}</h5>
+              		<h5 class="caption">Manufacturer: {{product_details.product_producer}}</h5>
+              </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>

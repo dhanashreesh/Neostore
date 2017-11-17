@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>NeostoreWebsite</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../vendors/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../vendors/fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/navbar.css">
+  <link rel="stylesheet" href="../../css/footer.css">
+  <link rel="stylesheet" href="../../css/product-details.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand" href="../../index.html">
+        <i class="fa fa-shopping-bag fa-lg" aria-hidden="true"> <strong >NeoSTORE</strong> </i>
+      </a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="nav navbar-nav">
+          <li><a href="../../index.html">HOME</a></li>
+        </ul>
+
+        <form autocomplete="off" class="pull-left">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <div class="input-group search-bar">
+                  <input name="search" class="form-control" />
+                  <span class="input-group-btn">
+                    <button type="submit" class="btn btn-default">
+                      <i class="fa fa-search"></i>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-user fa-lg" area-hidden="true"></i>
+            <span class="caret"></span>
+          </a>
+            <ul class="dropdown-menu">
+              <li><a href="../../views/user/profile.html"><i class="fa fa-user fa-fw" aria-hidden="true"></i>&nbsp; Profile</a></li>
+              <li><a href="../../views/user/orders.html"><i class="fa fa-list-alt fa-fw" aria-hidden="true"></i>&nbsp; Orders</a></li>
+              <li><a href="../../views/user/address.html"><i class="fa fa-address-card-o fa-fw" aria-hidden="true"></i>&nbsp; Addresses</a></li>
+              <li><a href="../../index.html"><i class="fa fa-sign-out fa-fw" aria-hidden="true"></i>&nbsp; Logout</a></li>
+              <li><a href="../../views/auth/login.html"><i class="fa fa-sign-in fa-fw" aria-hidden="true"></i>&nbsp; Login</a></li>
+              <li><a href="../../views/auth/register.html"><i class="fa fa-user-plus fa-fw" aria-hidden="true"></i>&nbsp; Register</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a class="text-primary" href="">
+            <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>Cart <span class="badge">3</span>
+          </a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+
+  <div class="container">
+    <div class="card">
+      <div class="row">
+        <div class="wrapper">
+          <div class="col-md-6">
+            <div class="preview">
+              <div class="preview-pic tab-content">
+                <div class="my-img active"><img class="actual-img" src="http://via.placeholder.com/300x200"></div>
+              </div>
+              <ul class="preview-thumbnail nav nav-tabs">
+                <li>
+                  <div class="my-img-thumb"><img src="http://via.placeholder.com/100x50"></div>
+                </li>
+                <li>
+                  <div class="my-img-thumb"><img src="http://via.placeholder.com/100x50"></div>
+                </li>
+                <li>
+                  <div class="my-img-thumb"><img src="http://via.placeholder.com/100x50"></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 ">
+            <div class="details">
+              <h3 class="text-danger">At vero eos et </h3>
+
+              <div class="text-warning">
+                <i class="fa fa-lg fa-star"></i>
+                <i class="fa fa-lg fa-star"></i>
+                <i class="fa fa-lg fa-star"></i>
+                <i class="fa fa-lg fa-star-o"></i>
+                <i class="fa fa-lg fa-star-o"></i>
+              </div>
+
+              <hr>
+              <h4>Price: <span class="text-success">20000 $</span></h4>
+              <h4>Color:
+                <span class="color" style="background: #B32E2E"></span>
+              </h4>
+
+              <div class="action">
+                <h4>Share on
+                  <i class="fa fa-share-alt fa-lg"></i>
+                </h4>
+                <div class="share-container">
+                  <a href="#" class="btn btn-primary"><i class="fa fa-lg fa-facebook"></i></a>&nbsp;
+                  <a href="#" class="btn btn-danger"><i class="fa fa-lg fa-google"></i></a>&nbsp;
+                  <a href="#" class="btn btn-info"><i class="fa fa-lg fa-twitter"></i></a>&nbsp;
+                  <a href="#" class="btn btn-primary"><i class="fa fa-lg fa-linkedin"></i></a>&nbsp;
+                  <a href="#" class="btn btn-success"><i class="fa fa-lg fa-whatsapp"></i></a>
+                </div>
+              </div>
+
+              <div class="action">
+                <button class="btn btn-primary" type="button">ADD TO CART</button>
+                <button type="button" class="btn btn-warning" data-toggle="modal" data-target=".bs-example-modal-sm">RATE PRODUCT</button>
+
+                <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                  <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content">
+                      <div class="modal-body">
+                        <div class="text-warning text-center">
+                          <i class="fa fa-lg fa-star"></i>
+                          <i class="fa fa-lg fa-star"></i>
+                          <i class="fa fa-lg fa-star"></i>
+                          <i class="fa fa-lg fa-star-o"></i>
+                          <i class="fa fa-lg fa-star-o"></i>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">CLOSE</button>
+                        <button type="button" class="btn btn-primary">RATE IT</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="wrapper">
+          <div class="col-md-12">
+            <div class="preview">
+              <div>
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                  <li role="presentation" class="active"><a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">Tab 1</a></li>
+                  <li role="presentation"><a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">Tab 2</a></li>
+                  <li role="presentation"><a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">Tab 3</a></li>
+                </ul>
+                <br>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div role="tabpanel" class="tab-pane active" id="tab1">Contrary to popular belief, Lorem Ipsum is not simply random text</div>
+                  <div role="tabpanel" class="tab-pane" id="tab2">It has roots in a piece of classical Latin literature from 45 BC, </div>
+                  <div role="tabpanel" class="tab-pane" id="tab3">making it over 2000 years old. Richard McClintock, a Latin </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <footer class="footer">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-4">
+          <h3>About Company</h3>
+          <div>
+            <p>NeoSOFT Technologies is here at your quick and easy service for shooping .</p>
+            <h6>Contact information</h6>
+            <p>Email: contact@neosofttech.com</p>
+            <p>Phone: +91 0000000000</p>
+            <p>MUMBAI, INDIA</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <h3>Information</h3>
+          <ul class="list-unstyled">
+            <li><a href="../info/terms-conditions.html">Terms &amp; Conditions</a></li>
+            <li><a href="../info/guarantee-return-policy.html">Guarantee &amp; Return Policy</a></li>
+            <li><a href="../info/contact-us.html">Contact us</a></li>
+            <li><a href="../info/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="../info/locate-us.html">Locate Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <h3>Newsletter</h3>
+          <form>
+            <div>
+              <p>Sign up to get exclusive offers from our favorite brands and to be well up in the news.</p>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="your email..." />
+              </div>
+              <button type="button" tooltip="Coming Soon" class="btn btn-default">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="container">
+      <p class="copywrite text-center">Copyright © 2017 NeoSOFT Technologies All rights reserved | Design by <a href="http://www.neosofttech.com/">NeoSOFT Technologies</a></p>
+    </div>
+  </footer>
+
+</body>
+
+<script src="../../vendors/jquery/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script src="../../vendors/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+</html>

@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row">
+
+      <!-- Sidebar -->
+      <app-side-bar (categoryFilter)="getProductByCategory($event)" 
+      (colorFilter)="getProductsByColor($event)"></app-side-bar>
+      
+      <!-- Product list -->
+      <div class="col-md-9 vertical-line">
+        <div class="row padding-row">
+          <h5 class="pull-left">{{categoryName}}</h5>
+          <div class="pull-right">
+            <ul class="nav nav-pills" role="tablist">
+              <li class="nav-item active">
+                <a class="nav-link" href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">
+                    <i class="fa fa-inr" aria-hidden="true"></i>
+                    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">
+                    <i class="fa fa-inr" aria-hidden="true"></i>
+                    <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <h5 class="pull-right">Sort By : </h5>
+        </div>
+
+        <br>
+        <div class="col-md-4" *ngFor="let product of productArray">
+          <div class="thumbnail">
+            <div class="img-thumb">
+              <img class="img-reposive" src="{{product.images[0].ImgURL}}" alt="product_image">
+            </div>
+            <div class="caption">
+              <p class="elipse-product"><a href="/product_details">{{product.product_name}}</a></p>
+              <button class="pull-right btn btn-danger btn-xs">Add To Cart</button>
+              <p><strong>{{product.product_cost| currency:'INR':true:'1.0-0'}}</strong></p>
+              <fieldset class="rating">
+                <div class="text-warning text-center">
+                  <star-rating-comp [starType]="'svg'" [size]="'medium'" [rating]="product.product_avg_rating" [readOnly]="true" [staticColor]="'negative'" [showHalfStars]="true"></star-rating-comp>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
